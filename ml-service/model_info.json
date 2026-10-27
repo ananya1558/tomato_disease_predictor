@@ -1,0 +1,33 @@
+{
+  "model_name": "EfficientNet-B2",
+  "num_classes": 10,
+  "class_names": [
+    "Tomato_Bacterial_spot",
+    "Tomato_Early_blight",
+    "Tomato_Late_blight",
+    "Tomato_Leaf_Mold",
+    "Tomato_Septoria_leaf_spot",
+    "Tomato_Spider_mites_Two_spotted_spider_mite",
+    "Tomato__Target_Spot",
+    "Tomato__Tomato_YellowLeaf__Curl_Virus",
+    "Tomato__Tomato_mosaic_virus",
+    "Tomato_healthy"
+  ],
+  "short_names": [
+    "Bacterial Spot",
+    "Early Blight",
+    "Late Blight",
+    "Leaf Mold",
+    "Septoria",
+    "Spider Mites",
+    "Target Spot",
+    "Yellow Curl",
+    "Mosaic Virus",
+    "Healthy"
+  ],
+  "input_size": 260,
+  "test_weighted_f1": 0.9918,
+  "test_macro_f1": 0.9887,
+  "best_epoch": 15,
+  "best_val_loss": 0.0054
+}

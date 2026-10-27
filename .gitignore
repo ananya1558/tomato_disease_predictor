@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+venv/
+__pycache__/
+.env
+build/
+dist/
+*.pyc
+.DS_Store
+models/
+*.h5
+*.pt
+*.pth
+

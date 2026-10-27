@@ -1,0 +1,200 @@
+{
+  "Bacterial Spot": {
+    "severity": "High",
+    "description": "Bacterial infection causing dark spots on leaves and fruits.",
+    "medicines": [
+      "Mancozeb fungicide",
+      "Streptomycin sulfate spray"
+    ],
+    "organic_solutions": [
+      "Copper-based bactericide spray",
+      "Neem oil spray every 7 days"
+    ],
+    "prevention": [
+      "Remove and destroy infected leaves immediately",
+      "Avoid overhead watering",
+      "Rotate crops next season"
+    ],
+    "recovery_time": "7-14 days",
+    "urgency": "Act within 2-3 days"
+  },
+
+  "Early Blight": {
+    "severity": "Medium",
+    "description": "Fungal disease causing brown concentric ring spots on older leaves.",
+    "medicines": [
+      "Chlorothalonil fungicide",
+      "Mancozeb spray every 10 days"
+    ],
+    "organic_solutions": [
+      "Bacillus subtilis biofungicide spray",
+      "Copper oxychloride spray"
+    ],
+    "prevention": [
+      "Remove lower infected leaves",
+      "Use mulch around plants",
+      "Ensure good air circulation"
+    ],
+    "recovery_time": "5-10 days",
+    "urgency": "Act within 1 week"
+  },
+
+  "Late Blight": {
+    "severity": "Critical",
+    "description": "Highly destructive fungal disease that spreads rapidly and can destroy crops.",
+    "medicines": [
+      "Metalaxyl + Mancozeb spray",
+      "Cymoxanil fungicide"
+    ],
+    "organic_solutions": [
+      "Copper hydroxide spray immediately",
+      "Trichoderma biofungicide soil drench"
+    ],
+    "prevention": [
+      "Remove and burn infected plants immediately",
+      "Do not compost infected material",
+      "Spray nearby healthy plants preventively"
+    ],
+    "recovery_time": "7-14 days",
+    "urgency": "Act TODAY"
+  },
+
+  "Leaf Mold": {
+    "severity": "Medium",
+    "description": "Fungal disease causing yellow patches on upper leaf surface.",
+    "medicines": [
+      "Chlorothalonil fungicide",
+      "Copper-based fungicide spray"
+    ],
+    "organic_solutions": [
+      "Neem oil spray weekly",
+      "Bacillus subtilis spray"
+    ],
+    "prevention": [
+      "Improve greenhouse ventilation",
+      "Reduce humidity around plants",
+      "Remove affected leaves promptly"
+    ],
+    "recovery_time": "5-10 days",
+    "urgency": "Act within 1 week"
+  },
+
+  "Septoria": {
+    "severity": "Medium",
+    "description": "Fungal disease causing small circular spots with dark borders.",
+    "medicines": [
+      "Mancozeb fungicide spray",
+      "Azoxystrobin fungicide"
+    ],
+    "organic_solutions": [
+      "Copper octanoate spray",
+      "Bacillus subtilis biofungicide"
+    ],
+    "prevention": [
+      "Remove infected lower leaves",
+      "Avoid wet foliage",
+      "Stake plants for airflow"
+    ],
+    "recovery_time": "5-10 days",
+    "urgency": "Act within 1 week"
+  },
+
+  "Spider Mites": {
+    "severity": "Medium",
+    "description": "Tiny mites causing yellowing and bronzing of leaves.",
+    "medicines": [
+      "Abamectin miticide spray",
+      "Bifenazate miticide"
+    ],
+    "organic_solutions": [
+      "Neem oil spray every 5 days",
+      "Insecticidal soap spray"
+    ],
+    "prevention": [
+      "Spray leaves with water jet",
+      "Introduce predatory mites",
+      "Avoid excess nitrogen fertilizer"
+    ],
+    "recovery_time": "4-8 days",
+    "urgency": "Act within 3-4 days"
+  },
+
+  "Target Spot": {
+    "severity": "Medium",
+    "description": "Fungal disease causing brown spots with concentric rings.",
+    "medicines": [
+      "Fluxapyroxad fungicide",
+      "Boscalid fungicide spray"
+    ],
+    "organic_solutions": [
+      "Copper-based fungicide spray",
+      "Trichoderma biofungicide"
+    ],
+    "prevention": [
+      "Remove infected leaves",
+      "Avoid dense planting",
+      "Apply mulch to reduce soil splash"
+    ],
+    "recovery_time": "5-10 days",
+    "urgency": "Act within 1 week"
+  },
+
+  "Yellow Leaf Curl": {
+    "severity": "Critical",
+    "description": "Viral disease spread by whiteflies causing curling and yellowing.",
+    "medicines": [
+      "Imidacloprid insecticide",
+      "Thiamethoxam spray"
+    ],
+    "organic_solutions": [
+      "Neem oil spray",
+      "Yellow sticky traps"
+    ],
+    "prevention": [
+      "Destroy infected plants immediately",
+      "Use reflective mulch",
+      "Plant resistant varieties"
+    ],
+    "recovery_time": "10-20 days",
+    "urgency": "Act TODAY"
+  },
+
+  "Mosaic Virus": {
+    "severity": "High",
+    "description": "Viral disease causing mottled yellow-green leaf patterns.",
+    "medicines": [
+      "No direct chemical cure",
+      "Aphid control insecticide"
+    ],
+    "organic_solutions": [
+      "Neem oil spray",
+      "Sanitize tools regularly"
+    ],
+    "prevention": [
+      "Destroy infected plants",
+      "Disinfect tools",
+      "Control aphids",
+      "Wash hands before handling plants"
+    ],
+    "recovery_time": "Recovery difficult once infected",
+    "urgency": "Act TODAY"
+  },
+
+  "Healthy": {
+    "severity": "None",
+    "description": "No disease detected. Plant appears healthy.",
+    "medicines": [
+      "No treatment needed"
+    ],
+    "organic_solutions": [
+      "Continue neem preventive spray"
+    ],
+    "prevention": [
+      "Maintain proper watering",
+      "Monitor weekly",
+      "Use balanced fertilizers"
+    ],
+    "recovery_time": "Not required",
+    "urgency": "No action needed"
+  }
+}
