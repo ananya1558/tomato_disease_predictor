@@ -1,32 +1,47 @@
 # 🍅 Tomato Leaf Disease Predictor
 
-An end-to-end AI-powered Tomato Leaf Disease Detection and Diagnosis platform built with **PyTorch (EfficientNet-B2)**, **FastAPI**, **Express.js**, and a modern **React** frontend.
+> 🎓 **Final Year Engineering Capstone Project**  
+> An end-to-end AI-powered Tomato Leaf Disease Detection and Agricultural Diagnosis platform built with **PyTorch (EfficientNet-B2)**, **FastAPI**, **Express.js**, and a modern **React** web dashboard.
+
+---
+
+## 🎓 Final Year Project Overview
+
+This system was engineered as a **Final Year Engineering Capstone Project** to solve critical challenges in automated plant pathology and crop disease management. Early detection of leaf diseases in tomato crops allows agriculturalists to prevent widespread blight, minimize pesticide overuse, and boost crop yields.
+
+### 🎯 Key Academic & Technical Highlights
+- **Deep Transfer Learning**: Leverages an **EfficientNet-B2** convolutional neural network backbone with custom regularization (Dropout 0.3/0.2) and fine-tuned classification heads.
+- **Robust Model Performance**:
+  - **Weighted F1-Score**: **`99.18%`**
+  - **Macro F1-Score**: **`98.87%`**
+  - **Best Validation Loss**: **`0.0054`** (at Epoch 15)
+- **Production Architecture**: Decoupled multi-tier system with an asynchronous **FastAPI** inference engine, an **Express.js** API proxy, and a reactive **React 19** frontend.
+- **Agricultural Remedy Knowledge Base**: Translates model predictions into actionable treatments, including chemical fungicides, organic sprays, prevention measures, and expected recovery windows.
 
 ---
 
 ## 🌟 Key Features
 
-- **Deep Learning Vision**: Uses an EfficientNet-B2 convolutional neural network fine-tuned to classify 10 distinct tomato leaf health conditions and diseases.
-- **FastAPI ML Service**: High-performance Python backend serving the model via asynchronous REST endpoints with top-3 confidence scoring.
-- **Treatment Knowledge Base**: Built-in treatment recommendations database providing actionable remedies for detected diseases.
-- **Modern Responsive Dashboard**: Interactive React dashboard with drag-and-drop leaf image scanning, live diagnosis reports, disease library database, and scan history.
-- **One-Click Launch**: Includes Windows launcher scripts (`start.bat` and `start.ps1`) to boot all services simultaneously.
+- **Deep Learning Vision**: Classifies tomato leaf photographs into 10 categories with top-3 probability confidence scores.
+- **Interactive Web Dashboard**: Drag-and-drop leaf image scanner with scanning animations, live diagnostic report cards, disease library reference, and scan history logs.
+- **Integrated Treatment Database**: Instant access to recommended medicines, organic treatments, recovery timelines, and urgency levels.
+- **Automated Windows Launch**: Includes [`start.bat`](start.bat) and [`start.ps1`](start.ps1) to spin up all services simultaneously.
 
 ---
 
 ## 🔬 Supported Disease Classes
 
 The model diagnoses 10 tomato plant conditions:
-1. Bacterial Spot (*Xanthomonas*)
-2. Early Blight (*Alternaria solani*)
-3. Late Blight (*Phytophthora infestans*)
-4. Leaf Mold (*Passalora fulva*)
-5. Septoria Leaf Spot (*Septoria lycopersici*)
-6. Spider Mites (*Two-spotted spider mite*)
-7. Target Spot (*Corynespora cassiicola*)
-8. Tomato Yellow Leaf Curl Virus (TYLCV)
-9. Tomato Mosaic Virus (ToMV)
-10. Healthy Tomato Leaf
+1. **Bacterial Spot** (*Xanthomonas spp.*)
+2. **Early Blight** (*Alternaria solani*)
+3. **Late Blight** (*Phytophthora infestans*)
+4. **Leaf Mold** (*Passalora fulva*)
+5. **Septoria Leaf Spot** (*Septoria lycopersici*)
+6. **Spider Mites** (*Two-spotted spider mite / Tetranychus urticae*)
+7. **Target Spot** (*Corynespora cassiicola*)
+8. **Tomato Yellow Leaf Curl Virus** (TYLCV)
+9. **Tomato Mosaic Virus** (ToMV)
+10. **Healthy Leaf** (Normal control specimen)
 
 ---
 
@@ -50,7 +65,8 @@ tomato-disease-predictor/
 │   └── server.js         # Multer file upload & axios proxy
 ├── start.bat             # Windows one-click startup batch script
 ├── start.ps1             # PowerShell multi-service runner
-└── README.md
+├── upload-to-github.bat  # Automated GitHub deployment helper
+└── README.md             # Project documentation
 ```
 
 ---
@@ -67,7 +83,7 @@ Double-click `start.bat` or run:
 ```powershell
 .\start.ps1
 ```
-This will automatically launch all 3 services in separate terminal windows.
+This boots all 3 services in separate windows and opens the app at [http://localhost:3000](http://localhost:3000).
 
 ### 3. Manual Step-by-Step Launch
 
@@ -77,7 +93,7 @@ cd ml-service
 pip install -r requirements.txt
 python -m uvicorn main:app --reload --port 8000
 ```
-- API Documentation (Swagger): [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- API Documentation (Swagger UI): [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 #### B. Start Express Proxy Server (Optional)
 ```bash
@@ -107,9 +123,17 @@ Uploads a leaf image and returns top 3 predictions with confidence scores and re
 {
   "prediction": [
     {
-      "disease": "Early Blight",
-      "confidence": 0.942,
-      "treatment": "Remove infected lower leaves; apply copper-based fungicide; ensure adequate plant spacing."
+      "disease": "Target Spot",
+      "confidence": 0.739,
+      "treatment": {
+        "severity": "Medium",
+        "description": "Fungal disease causing brown spots with concentric rings.",
+        "medicines": ["Fluxapyroxad fungicide", "Boscalid fungicide spray"],
+        "organic_solutions": ["Copper-based fungicide spray", "Trichoderma biofungicide"],
+        "prevention": ["Remove infected leaves", "Avoid dense planting", "Apply mulch"],
+        "recovery_time": "5-10 days",
+        "urgency": "Act within 1 week"
+      }
     }
   ]
 }
@@ -117,6 +141,13 @@ Uploads a leaf image and returns top 3 predictions with confidence scores and re
 
 ### `GET /treatment/{disease_name}`
 Retrieves treatment information for a specific disease.
+
+---
+
+## 👩‍💻 Author
+- **Ananya**  
+- Final Year Project / Capstone Project  
+- GitHub: [@ananya1558](https://github.com/ananya1558)
 
 ---
 
